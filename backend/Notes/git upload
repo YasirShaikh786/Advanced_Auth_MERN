@@ -1,0 +1,6 @@
+D:\MERN\AUTEHNTICATION>git init
+
+git remote add origin https://github.com/YasirShaikh786/Advanced_Auth_MERN.git
+git branch -M main
+git push -u origin main 
+
