@@ -1,0 +1,18 @@
+import jwt from "jsonwebtoken";
+
+export const generateTokenAndSetCookie = (res, user_id) => {
+    const token = jwt.sign({ user_id }, process.env.JWT_SECRET, {
+        expiresIn: "7d",    //token expires in 7 day
+    })
+    res.cookie("token", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 7 * 24 * 60 * 60 * 1000, //cookie expires in 7 day
+    });
+}
+
+
+https://chatgpt.com/share/6739cc5d-3814-8011-97af-7fbaee7009c0
+
+https://chatgpt.com/share/673aa9eb-267c-8011-9516-6eb5cfd9ba56

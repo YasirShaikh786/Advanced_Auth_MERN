@@ -1,0 +1,3 @@
+
+dotenv.config();
+https://chatgpt.com/share/6739835e-b948-8011-a81f-af27a84d6f82

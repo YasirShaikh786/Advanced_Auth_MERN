@@ -1,0 +1,7 @@
+purpose of app,get app.use app,listen
+
+https://chatgpt.com/share/6739856e-42f8-8011-a91b-9c25124c3981
+
+app.use is executed first 
+app.get send conetnt to path
+app.listen sepcfies host route

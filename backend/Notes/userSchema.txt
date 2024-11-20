@@ -1,0 +1,11 @@
+const userSchema = new mongoose.Schema({},{timestamps:true});   
+
+https://chatgpt.com/share/67398e46-20ec-8011-8607-4338a7c4c152
+
+
+  resetPasswordToken: String,       
+  resetPasswordExpire: Date,
+  verficationToken: String,
+  verficationTokenExpire: Date,
+
+  https://chatgpt.com/share/6739917f-9104-8011-bb35-0bbd4df87556

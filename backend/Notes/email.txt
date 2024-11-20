@@ -1,0 +1,24 @@
+import { mailtrapClient,sender } from "./mailtrapConfig.js";
+import { VERIFICATION_EMAIL_TEMPLATE } from "./emailTemplate.js";
+export const sendVerificationEmail = async (email, verificationToken) => {
+    const recipient= [{email}];
+    
+    try {
+        const response= await mailtrapClient.send({
+            from : sender,
+            to : recipient,
+            subject : "Verify Your Email",
+            html : VERIFICATION_EMAIL_TEMPLATE.replace("{verificationCode}",verificationToken),
+            category : "Email Verification",
+        })
+        console.log("Email sent successfully",response);    
+
+    } catch (error) {
+        console.error("Error sending Verification email: ${error.message}");
+        throw new Error("Failed to send  Verification email ${error.message}");  
+        
+    }
+}
+
+
+https://chatgpt.com/share/673a2bf9-c98c-8011-8aa9-0cf01e23e346

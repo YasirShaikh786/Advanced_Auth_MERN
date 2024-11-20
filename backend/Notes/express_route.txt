@@ -1,0 +1,3 @@
+const router = express.Router
+
+https://chatgpt.com/share/67398751-6e2c-8011-9bfd-a3eb4e8ff44c

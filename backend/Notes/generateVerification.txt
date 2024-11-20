@@ -1,0 +1,40 @@
+export const generateVerificationCode = () => {
+    return Math.floor(100000 + Math.random() * 900000).toString(); 
+};
+
+
+
+
+1. export: 
+   - Makes this function available for use in other files/modules. It's part of ES6 module syntax.
+
+2. const generateVerificationCode: 
+   - Declares a constant named generateVerificationCode, which is assigned an arrow function (=>).
+
+3. Math.random():
+   - Generates a pseudo-random floating-point number between 0 (inclusive) and 1 (exclusive).
+
+4. Math.random() * 900000:
+   - Scales the random number to a range between 0 and 900,000.
+
+5. 100000 + Math.random() * 900000:
+   - Shifts the range from [0, 900,000) to [100,000, 1,000,000), ensuring that the result is always a six-digit number.
+
+6. Math.floor(...):
+   - Rounds down the result to the nearest integer, effectively creating a six-digit whole number.
+
+7. .toString():
+   - Converts the numeric value into a string.
+
+Example Outputs
+Each call to generateVerificationCode() will produce a random six-digit string, such as:
+- "123456"
+- "789012"
+- "345678"
+
+Why Use This Approach?
+- Uniform Distribution: This ensures that all six-digit numbers have an equal chance of being generated.
+- Simplicity: The logic is concise and easy to understand.
+- Suitability for OTPs: This approach is commonly used for generating one-time passwords (OTPs) or verification codes. 
+
+If you use this in a production environment, consider additional measures like uniqueness or a time-limited validity for the generated codes.

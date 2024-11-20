@@ -1,0 +1,5 @@
+if package.json has bcryptjs then use 
+import bcryptjs from "bcryptjs";
+
+if it  has bcrypt.js then use
+import bcryptjs from "bcrypt.js";
